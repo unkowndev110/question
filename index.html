@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 😍-Let's smile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(rgb(0, 249, 236), rgb(71, 150, 229));
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .edit {
+    background-color: #017cff;
+    color: white;
+    font-weight: 600;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 3px 3px black;
+    text-decoration: none;
+
+    /* Add these animation properties */
+    animation-name: slideInFromTop;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards; /* Keeps the final state after the animation */
+    opacity: 0; /* Start with opacity 0 so it gradually appears */
+    transform: translateY(-50px); /* Start position above the top */
+}
+
+.edit:hover {
+    background-color: #ffffff;
+    color: #017cff;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+        .question {
+            background: linear-gradient(45deg, #05f511, #ff0707, rgb(235, 38, 209),white);
+            color: transparent;
+            font-size: 2em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
+            animation: slideIn 2s ease-in-out forwards;
+        }
+
+        .word {
+            margin: 0 5px;
+            animation: rotate 1s linear infinite, bounce 1s ease-in-out infinite;
+        }
+
+        .emoji {
+            font-size: 2em;
+            margin: 10px;
+            animation: bounce 1s infinite, rotate 1s linear infinite;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>
+        <span class="word animated">Hey...</span>
+        <span class="word animated">Cutie</span>
+        <span class="word animated">Waleed</span>
+        <span class="word animated">Ahmad</span>
+        <span class="word animated">!</span>
+    </h2>
+    <h1 class="question">I want to ask you some Questions <span>Your choice will be the first priority</span></h1>
+    <div class="emoji animated" onclick="askQuestion()">😊</div>
+</div>
+
+  <a class="edit" href="Question-1.html">Let's Start</a>
+
+    <script>
+        function askQuestion() {
+            alert("You can ask me any question too");
+        }
+
+        // Call the function after 3000 milliseconds (3 seconds)
+        setTimeout(askQuestion, 3000);
+    </script>
+</body>
+</html>
+
+
+
+
